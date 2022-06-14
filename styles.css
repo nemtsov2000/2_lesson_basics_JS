@@ -1,0 +1,57 @@
+.table {
+  border: 1px solid green;
+  border-collapse: collapse;
+}
+
+th, tr, td {
+  border: 1px solid green;
+}
+
+th {
+  padding: 0 5px;
+}
+
+.main {
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+}
+
+.block-short, .block-full {
+  margin-bottom: 30px;
+}
+
+.block-full__lastname {
+  width: 88px;
+}
+
+.block-full__firstname {
+  width: 80px;
+}
+
+.block-full__manufacturer {
+  width: 122px;
+}
+
+.block-full__model {
+  width: 80px;
+}
+
+.block-full__year {
+  width: 102px;
+}
+
+.block-full__type {
+  width: 150px;
+}
+
+.block-full__color {
+  width: 90px;
+}
+
+.block-full__isConvertible {
+  width: 90px;
+}
+
+.block-full__vin {
+  width: 180px  ;
+}
