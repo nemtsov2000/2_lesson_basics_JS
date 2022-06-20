@@ -11,11 +11,6 @@ th {
   padding: 0 5px;
 }
 
-.main {
-  /*display: flex;*/
-  /*justify-content: space-around;*/
-}
-
 .block-short, .block-full {
   margin-bottom: 30px;
 }
@@ -54,4 +49,21 @@ th {
 
 .block-full__vin {
   width: 180px  ;
+}
+
+.block-short {
+  cursor: pointer;
+}
+
+.block-full {
+  display: none;
+}
+
+input#inputCheckbox[readonly] {
+  pointer-events: none;
+}
+
+#divColor {
+  width: 15px;
+  height: 15px;
 }
