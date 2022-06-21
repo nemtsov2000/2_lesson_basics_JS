@@ -1,21 +1,22 @@
 import drivers from './motorists.json' assert { type: 'json' } ;
 
-function makeTr (tr, text, id) {
+function makeTr(tr, text, id) {
     const td = document.createElement("td");
     td.innerText = text;
     if (id) td.id = id;
     tr.append(td);
+
 }
 
-function makeDivColor (driverCarColor) {
+function makeDivColor(driverCarColor) {
     const td = document.getElementById("color");
     const divColor = document.createElement("div");
-    divColor.id = "divColor";
+    divColor.className = "div-color";
     divColor.style.backgroundColor = driverCarColor;
     td.append(divColor);
 }
 
-function makeInputCheckbox (driverCarIsConvertible) {
+function makeInputCheckbox(driverCarIsConvertible) {
     const td = document.getElementById("isConvertible");
     const inputCheckbox = document.createElement("input");
     inputCheckbox.type = "checkbox";
@@ -26,7 +27,7 @@ function makeInputCheckbox (driverCarIsConvertible) {
     td.append(inputCheckbox);
 }
 
-function onClickEvent (index) {
+function onClickEvent(index) {
     document.getElementById('block-full').style.display = "block";
     const driver = drivers[index];
     if (!document.getElementById("trFull")) {
@@ -59,12 +60,13 @@ function onClickEvent (index) {
     }
 }
 
-function addRows (drivers) {
+function addRows(drivers) {
     const tbodyShort = document.getElementById('tbodyShort');
     drivers.forEach((item, index) => {
         const tr = document.createElement('tr');
         tr.id = index;
-        tr.onclick = () => {onClickEvent (index)};
+        tr.onclick = () => onClickEvent(index);
+        tr.className = "pointer";
         tbodyShort.append(tr);
         makeTr(tr, item.person.lastname);
         makeTr(tr, item.person.firstname)

@@ -51,7 +51,7 @@ th {
   width: 180px  ;
 }
 
-.block-short {
+.pointer {
   cursor: pointer;
 }
 
@@ -63,7 +63,11 @@ input#inputCheckbox[readonly] {
   pointer-events: none;
 }
 
-#divColor {
+.div-color {
   width: 15px;
   height: 15px;
+}
+
+.pointer:hover {
+  background-color: #e4e4e4;
 }
