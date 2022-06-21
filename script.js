@@ -76,6 +76,4 @@ function addRows(drivers) {
     });
 }
 
-window.onload = function() {
-    addRows(drivers);
-};
+window.onload = () => addRows(drivers);
